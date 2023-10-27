@@ -1,0 +1,126 @@
+:root {--frontera: 10px solid purple; }
+* {background-color: rgb(66, 2, 2);
+color: salmon;}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: 
+  center;
+  align-items: center;
+  padding: 16px;
+  background-color: seashell;
+}
+
+.top-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  align-items: baseline;
+  padding-top: 1em;
+  background-color: seashell;
+}
+.left-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: seashell;
+}
+.top-links {
+    display: flex;
+    font-size: 80%;
+    margin: auto;
+    margin-bottom: 10;
+    list-style: none;
+    padding-left: 22%;
+    padding-bottom: 1%;
+    background-color: seashell;
+}
+
+.link-space {
+    display: flex;
+    background-color: seashell;
+    flex-wrap: wrap;
+}
+
+.link-space li {
+    margin: 0 4%;
+    text-decoration: underline;
+}
+
+.bjj {
+    display: flex;
+    justify-content: right;
+    }
+
+.about {
+    display: flex;
+    margin-left: 25%;
+    
+}
+
+.container {display: grid;
+grid-template-columns: 1fr 3fr;
+grid-gap: 16px;}
+
+.description {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+
+p {
+    display: inline-block;
+    
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+}
+
+.card1 {
+    width: 60%; 
+    border: var(--frontera);
+    }
+
+   .secondary-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 16px;
+
+.digits {}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-links {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
