@@ -1,126 +1,144 @@
-:root {--frontera: 10px solid purple; }
-* {background-color: rgb(66, 2, 2);
-color: salmon;}
+:root {
+  --frontera: 10px solid purple;
+  --no-style: list-style none;
+}
+* {
+background-color: rgb(238, 235, 231);
+  color: salmon;
+  margin: 0;
+  padding: 0;
+  
+}
 
-.header {
+header {
   display: flex;
-  flex-direction: column;
-  justify-content: 
-  center;
-  align-items: center;
-  padding: 16px;
+  justify-content: space-between;
+  padding: 1em;
   background-color: seashell;
 }
 
-.top-links {
+h1 {
+  background-color: purple;
+}
+
+nav {
+  width: 50%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  align-content: center;
+}
+
+.grappling {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-}
-h1 {
-  display: flex;
-  align-items: baseline;
-  padding-top: 1em;
+  align-items: flex-end;
   background-color: seashell;
-}
-.left-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: seashell;
-}
-.top-links {
-    display: flex;
-    font-size: 80%;
-    margin: auto;
-    margin-bottom: 10;
-    list-style: none;
-    padding-left: 22%;
-    padding-bottom: 1%;
-    background-color: seashell;
+  height: 18vh;
+
 }
 
-.link-space {
-    display: flex;
-    background-color: seashell;
-    flex-wrap: wrap;
-}
-
-.link-space li {
-    margin: 0 4%;
-    text-decoration: underline;
-}
-
-.bjj {
-    display: flex;
-    justify-content: right;
-    }
-
-.about {
-    display: flex;
-    margin-left: 25%;
-    
-}
-
-.container {display: grid;
-grid-template-columns: 1fr 3fr;
-grid-gap: 16px;}
-
-.description {
-  grid-column: 2 / 3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
-}
-
-p {
-    display: inline-block;
-    
-}
-
-.flexbox {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.block {
+main section {
   display: flex;
-  flex-direction: column;
-  margin-right: 16px;
+  min-height: 250px;
 }
 
-.card1 {
-    width: 60%; 
-    border: var(--frontera);
+
+main section h2 {
+  width: 30%;
+}
+
+main section div {
+  width: 70%;
+}
+
+li {list-style: 
+  none;
+  }
+
+.div, ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h2, div {    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;}
+
+  main section h2 {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 4vh;
+    border-right: 1vh solid green;
+  }
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 15vh);
+  grid-gap: 1em;
+}
+
+.first {list-style: none;
+    height: 30vh;
+    width: 145vh;
+    border: 5px solid black;
     }
 
-   .secondary-projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 16px;
+.second, .third, .fourth, .fifth {
+    list-style: none;
+    height: 15vh;
+    width: 50%;
+    border: 5px solid black;}
 
-.digits {}
+.second {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
 
-.list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-evenly;
-}}
+.third {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.fourth {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.fifth {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
   }
+ /* lines 131-143 coppied directly from the bootcamp AI on the prompt how would I make .first more responsive*/
+  @media (max-width: 768px) {
+  .first {
+    height: 20vh;
+    font-size: 14px;
+  }
+}
 
-  .top-links {
-    justify-content: space-between;
-    width: 100%;
+@media (max-width: 480px) {
+  .first {
+    height: 10vh;
+    font-size: 12px;
+    border-width: 2px;
   }
 }
