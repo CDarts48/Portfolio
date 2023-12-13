@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header style="border: 1px solid black">
-      <h1>Corey's Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#preguntas">About</a></li>
-          <li>
-            <a href="#trabajo">
-                Work
-            </a>
-          </li>
-          <li><a href="#contacto">Contact</a></li>
-          <li>Resume</li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <title>Weather App</title>
+</head>
+<body>
+    <header>Weather App</header>
+    
+    <form autocomplete="off" id ="searchForm">
+        <input type="submit" id ="searchBtn" value="Search">
+        <label for="selected-city">Enter a City:</label>
+         <input type="text" id="selected-city" placeholder="Search for a city">
+    </form>
+    <section class = "top">
+    <section class="search-history">
+        <h2>Search History</h2>
+        <ul id = "results">
         </ul>
-      </nav>
-    </header>
-    <main>
-        <div     class="grappling";>
-        <h2 class="judo">Grappling is fun!</h2>
-        </div>
-      <section id="preguntas">
-        <h2>About
-        <br> 
-        Me</h2>
-        <div>
-          <p>
-            I'm baby distillery cold-pressed raw denim green juice keytar small batch trust fund XOXO meditation tilde cupping organic wayfarers portland keffiyeh. Viral stumptown cloud bread shabby chic, polaroid distillery chartreuse la croix occupy keytar four loko vexillologist. Fixie ethical scenester succulents live-edge cray lo-fi, vibecession pork belly direct trade everyday carry schlitz beard salvia fashion axe. Vape hashtag hella, cupping ethical letterpress banh mi tacos hot chicken flexitarian bicycle rights normcore offal grailed butcher. Swag blackbird spyplane schlitz, actually hoodie yes plz PBR&B meh drinking vinegar JOMO. Disrupt celiac vibecession waistcoat succulents kinfolk organic ascot tumblr aesthetic chartreuse gatekeep mukbang. Subway tile pickled trust fund lomo fashion axe woke enamel pin literally gastropub.
-          </p>
-          <br>
-          <p>
-            I'm baby cronut migas DSA, locavore meh cred forage vexillologist listicle actually man bun franzen helvetica slow-carb chillwave. Succulents marxism subway tile keytar banjo keffiyeh fit. Shoreditch fashion axe bodega boys big mood pug tumeric. Venmo tumeric twee williamsburg cloud bread mixtape cupping bespoke. Truffaut swag cupping air plant, jawn ennui organic. Echo park godard slow-carb leggings, drinking vinegar ennui try-hard hashtag.
-        </div>
-      </section>
-      <section id="trabajo">
-        <h2>Work</h2>
-        <div class="container">
+        </section>
+    <section class="current-weather">
+  <li class="ciudad">City</li>
+  <li id="current-date">(Date)</li>
+  <li>Temp: <span id="temp"></span></li>
+  <li>Wind: <span id="wind"></span></li>
+  <li>Humidity: <span id="humidity"></span></li>
+  <!-- formatted using Xpert learning assistant -->
+</section>
+    </section>
+    <section class = "bottom">
+    <section id ="forecast";">5 Day Forecast</section>
+    <section class = "forecast-container">
         <ul>
-            <li class="first"><div><a href="https://github.com/CDarts48/Horriseon-SEO-Website">Refractoring</a></div></li>
-            <li class="second"><div>Topher's M&R</div></li>
-            <li class="third"><div><a href="https://en.wikipedia.org/wiki/Dojoyaburi">Dojoyaburi</a></div></li>
-            <li class="fourth"><div>Stock Tracker</div></li>
-            <li class="fifth"><div>Translator</div>
+            <li id = "day1" class = "of-week">
+            </li>
+            <li id = "day2" class = "of-week"">
+            </li>
+            <li id = "day3" class = "of-week">
+            </li>
+            <li id = "day4" class = "of-week">
+            </li>
+            <li id = "day5" class = "of-week">
             </li>
         </ul>
-        </div>
-      </section>
-      <section class="llama-me">
-        <h2 id="contacto">Contact<br> Me</h2>
-        <div>
-            <li>303-030-0303</li>
-            <li>cdartswebdev@gmail.com</li>
-            <li>Contact</li>
-            <li>Resume</li>
-          </ul>   
-          </div>  
-      </section>
-    </main>
-    <footer></footer>
-  </body>
+
+<!-- List above will be dynamically populated -->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
